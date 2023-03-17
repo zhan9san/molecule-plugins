@@ -78,7 +78,7 @@ def test_dockerfile():
     env = os.environ.copy()
     env["ANSIBLE_FORCE_COLOR"] = "0"
     result = subprocess.run(
-        ["ansible-playbook", "-i", "localhost,", "playbooks/validate-dockerfile.yml"],
+        ["ansible-playbook", "-i", "localhost,", "playbooks/validate-dockerfile.yml", "-vvvvvv"],
         check=False,
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
